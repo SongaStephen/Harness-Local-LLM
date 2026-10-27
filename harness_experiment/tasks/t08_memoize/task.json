@@ -1,0 +1,6 @@
+{
+  "id": "T8",
+  "name": "Memoize a recursive function",
+  "category": "Feature addition",
+  "prompt": "The file solution.py contains a correct but unmemoized recursive `count_partitions(n, k)` function that is too slow on realistic inputs due to exponential recomputation. Add memoization (e.g., functools.lru_cache or a manual dict cache) WITHOUT changing the function's signature or its return values. Return the FULL corrected contents of solution.py and nothing else — no explanation, no markdown fences."
+}

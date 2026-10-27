@@ -1,0 +1,20 @@
+def status_message(code):
+    """Return a human-readable message for an HTTP-like status code."""
+    if code == 200:
+        return "OK"
+    elif code == 201:
+        return "Created"
+    elif code == 400:
+        return "Bad Request"
+    elif code == 401:
+        return "Unauthorized"
+    elif code == 403:
+        return "Forbidden"
+    elif code == 404:
+        return "Not Found"
+    elif code == 500:
+        return "Internal Server Error"
+    else:
+        return "Unknown Status"
+    # BUG: long if/elif chain (refactor to a dict lookup), and it is
+    # missing code 429 (Too Many Requests) entirely.

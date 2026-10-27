@@ -1,0 +1,6 @@
+{
+  "id": "T10",
+  "name": "Lookup-table refactor",
+  "category": "Refactor",
+  "prompt": "The file solution.py contains a status_message(code) function using a long if/elif chain, and it is missing status code 429 ('Too Many Requests'). Refactor it to use a dictionary lookup, add the missing 429 entry, and keep 'Unknown Status' as the fallback for any other code. Return the FULL corrected contents of solution.py and nothing else — no explanation, no markdown fences."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "T4",
+  "name": "Unstable sort comparator",
+  "category": "Bug fix",
+  "prompt": "The file solution.py contains a `compare_priority(a, b)` comparator function used with functools.cmp_to_key to sort task dicts by their 'priority' key (higher priority first). It never returns 0 when two priorities are equal, which violates the comparator contract (equal items must compare as equal) and produces non-deterministic ordering for ties. Fix it so equal priorities return 0. Return the FULL corrected contents of solution.py and nothing else — no explanation, no markdown fences."
+}

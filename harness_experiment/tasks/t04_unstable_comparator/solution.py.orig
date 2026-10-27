@@ -1,0 +1,10 @@
+def compare_priority(a, b):
+    """Comparator for sorting task dicts by 'priority' (higher priority first).
+    Intended for use with functools.cmp_to_key."""
+    if a["priority"] > b["priority"]:
+        return -1
+    else:
+        return 1
+    # BUG: never returns 0 for equal priorities. This violates the comparator
+    # contract (a==b must give 0) and makes the resulting order non-transitive
+    # and unstable, since equal-priority items get arbitrarily reordered.

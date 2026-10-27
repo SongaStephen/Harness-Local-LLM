@@ -1,0 +1,18 @@
+def validate_username(username):
+    if not isinstance(username, str) or not username.strip():
+        raise ValueError("username must be a non-empty string")
+    if len(username) > 20:
+        raise ValueError("username must be at most 20 characters")
+    return username.strip()
+
+
+def validate_display_name(display_name):
+    if not isinstance(display_name, str) or not display_name.strip():
+        raise ValueError("display_name must be a non-empty string")
+    if len(display_name) > 21:
+        # BUG: near-duplicate of validate_username's block above, but this
+        # copy drifted to `> 21` instead of `> 20`, silently allowing one
+        # extra character. Extracting a single shared helper prevents this
+        # kind of divergence.
+        raise ValueError("display_name must be at most 20 characters")
+    return display_name.strip()

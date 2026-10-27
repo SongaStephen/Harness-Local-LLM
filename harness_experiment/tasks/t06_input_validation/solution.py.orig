@@ -1,0 +1,6 @@
+def create_user(payload):
+    """Create a user record from a request payload dict.
+    Expected keys: 'name' (non-empty str), 'age' (int, 0-150)."""
+    # BUG: no validation at all -- bad input causes confusing KeyError/TypeError
+    # instead of a clear ValueError, or is silently accepted.
+    return {"name": payload["name"], "age": payload["age"]}

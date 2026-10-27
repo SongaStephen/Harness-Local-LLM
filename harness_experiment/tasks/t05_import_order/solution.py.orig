@@ -1,0 +1,10 @@
+def get_config():
+    return _load_config()
+
+CONFIG = get_config()
+# BUG: this line runs at import time, calling get_config() -> _load_config()
+# before _load_config is defined below, raising NameError on import.
+# (Single-file stand-in for the classic circular/definition-order import bug.)
+
+def _load_config():
+    return {"env": "production", "debug": False}
